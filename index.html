@@ -5,7 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Deepak Yogi - Premium Portfolio</title>
-
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script src="config.js"></script>
+<script src="validation.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -13,6 +17,7 @@
 <body>
 
 <!-- NAV -->
+ <div id="toast-container"></div>
 <nav class="nav">
 
     <div class="logo">deepak.</div>
@@ -33,7 +38,7 @@
             </button>
         </div>
 
-        <button class="resume-btn">Download Resume ⬇</button>
+        <button class="resume-btn" href="assets/Deepak_Yogi_updated_Resume (1).docx">Download Resume ⬇</button>
     </div>
 
 </nav>
@@ -179,23 +184,23 @@ Jaipur, Rajasthan
       <img src="assets/connet.svg" alt="alt connect image">
     </div>
 
-    <form class="contact-form">
+    <form class="contact-form" id="contact-form">
 
-      <div class="row">
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-      </div>
+  <div class="row">
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="email" id="email" placeholder="Your Email">
+  </div>
 
-      <div class="row">
-        <input type="text" placeholder="Mobile Number">
-        <input type="text" placeholder="Subject">
-      </div>
+  <div class="row">
+    <input type="text" id="mobile" placeholder="Mobile Number">
+    <input type="text" id="subject" placeholder="Subject">
+  </div>
 
-      <textarea placeholder="Message"></textarea>
+  <textarea id="message" placeholder="Message"></textarea>
 
-      <button>Send Message</button>
+  <button type="submit">Send Message</button>
 
-    </form>
+</form>
 
   </div>
 

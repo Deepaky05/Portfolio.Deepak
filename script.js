@@ -33,3 +33,48 @@ setTimeout(typing,100);
 }
 }
 typing();
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  // 🔐 EmailJS Init
+  emailjs.init({
+    publicKey: CONFIG.EMAILJS_PUBLIC_KEY,
+  });
+
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // 🧠 Get values
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mobile = document.getElementById("mobile").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    // 🔥 Validation check
+    if (!validateForm(name, email, mobile, subject, message)) {
+      return;
+    }
+
+    // 🚀 Send Email
+    emailjs.send("service_upayags", "template_h25lgxh", {
+      from_name: name,
+      from_email: email,
+      from_mobile: mobile,
+      subject: subject,
+      message: message
+    })
+    .then(() => {
+      showToast("Message Sent Successfully 🚀", "success");
+      form.reset();
+    })
+    .catch((error) => {
+      console.log(error);
+      showToast("Failed to send message ❌", "error");
+    });
+
+  });
+
+});

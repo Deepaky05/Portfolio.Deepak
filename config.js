@@ -1,0 +1,3 @@
+const CONFIG = {
+  EMAILJS_PUBLIC_KEY: "62VEumXUI-rMK-r-j"
+}
