@@ -256,3 +256,37 @@ text-align:center;
 
 .section{padding:80px 20px;}
 }
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: linear-gradient(90deg, #0a0a0a, #1a1a1a);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #aaa;
+  font-size: 14px;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
+  color: #ff7a18; /* highlight orange */
+  font-weight: 500;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    text-align: center;
+  }
+}
