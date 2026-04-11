@@ -169,7 +169,9 @@ animation:float 3s infinite;
 .section{
 padding:80px 60px;
 }
-
+.section h2{
+    padding-bottom: 15px;
+}
 .section.dark{
     background:rgba(255,255,255,0.02);
 }
@@ -207,6 +209,7 @@ background:rgba(255,255,255,0.04);
 border-radius:18px;
 border:1px solid rgba(255,255,255,0.08);
 transition:0.3s;
+border-left: 1px orange;
 }
 
 .exp-card:hover{
@@ -277,16 +280,127 @@ text-align:center;
   font-weight: 500;
 }
 
-/* Mobile responsive */
+
+
+/* GLOBAL FIX (VERY IMPORTANT) */
+* {
+  box-sizing: border-box;
+}
+
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 40px;
+}
+
+.contact h2 span {
+  color: #ff7a18;
+}
+
+.contact-subtext {
+  max-width: 600px;
+  margin: 12px auto 60px auto;
+  text-align: center;
+  color: #b5b5b5;
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+}
+
+/* WRAPPER */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* 🔥 KEY FIX */
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* LEFT */
+.contact-left {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-left img {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* FORM */
+.contact-form {
+  flex: 1 1 350px;
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* ROW INPUTS */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+/* INPUTS */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #111;
+  color: white;
+}
+
+/* BUTTON */
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #ff7a18;
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* 📱 MOBILE */
 @media (max-width: 768px) {
-  .footer {
+
+  .contact h2 {
+    font-size: 28px;
+  }
+
+  .contact-wrapper {
     flex-direction: column;
-    gap: 8px;
     text-align: center;
   }
 
-  .footer-left,
-  .footer-right {
-    text-align: center;
+  .row {
+    flex-direction: column; /* 🔥 IMPORTANT */
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-left img {
+    max-width: 220px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-left {
+    display: none;
+  }
+
+  .contact-form {
+    width: 100%;
   }
 }
