@@ -20,29 +20,43 @@
  <div id="toast-container"></div>
 <nav class="nav">
 
-    <div class="logo">deepak.</div>
+  <div class="logo">deepak.</div>
 
-    <div class="nav-center">
-        <a href="#home">🏠 Home</a>
-        <a href="#about">👤 About</a>
-        <a href="#skills">⚡ Skills</a>
-        <a href="#exp">💼 Experience</a>
-        <a href="#contact">✉ Contact</a>
-    </div>
+  <!-- HAMBURGER -->
+  <div class="menu-btn" onclick="openMenu()">☰</div>
 
-    <div class="nav-right">
-        <div class="search-box">
-            <input type="text" placeholder="Search...">
-            <button>
-                <img alt="Tech Icon" class="search" src="assets/search.svg">
-            </button>
-        </div>
-
-        <button class="resume-btn" href="assets/Deepak_Yogi_updated_Resume (1).docx">Download Resume ⬇</button>
-    </div>
+  <!-- DESKTOP MENU -->
+  <div class="nav-center">
+    <a href="#home">🏠 Home</a>
+    <a href="#about">👤 About</a>
+    <a href="#skills">⚡ Skills</a>
+    <a href="#exp">💼 Experience</a>
+    <a href="#contact">✉ Contact</a>
+  </div>
 
 </nav>
 
+<!-- MOBILE SIDEBAR -->
+<div class="mobile-menu" id="mobileMenu">
+
+  <div class="mobile-header">
+    <div class="logo">deepak.</div>
+    <span onclick="closeMenu()">✕</span>
+  </div>
+
+  <input type="text" placeholder="Search blog..." class="mobile-search">
+
+  <a href="#home" onclick="closeMenu()">🏠 Home</a>
+  <a href="#about" onclick="closeMenu()">👤 About</a>
+  <a href="#skills" onclick="closeMenu()">⚡ Skills</a>
+  <a href="#exp" onclick="closeMenu()">💼 Experience</a>
+  <a href="#contact" onclick="closeMenu()">✉ Contact</a>
+
+  <a href="assets/resume.pdf" download class="mobile-resume">
+    Download Resume ⬇
+  </a>
+
+</div>
 <!-- HERO -->
 <section class="hero" id="home">
 
