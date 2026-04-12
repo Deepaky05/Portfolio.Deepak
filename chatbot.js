@@ -19,7 +19,7 @@ function loadChatbot() {
       </div>
 
       <div class="chat-body">
-        👋 Hey! Ask me anything...
+        👋 Hey! Deepak is working on it (Under Development)...
       </div>
 
       <div class="chat-footer">
