@@ -86,3 +86,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+ fetch("chatbot.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("chatbot-container").innerHTML = data;
+      });
